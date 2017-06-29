@@ -19,10 +19,9 @@ function countLetters(counter, sample_text){
   if (sample_text.length === 0){
     return counter;
   }
-  let letter = sample_text.substring(0,1);
-  let newLetter = letter.toLowerCase();
-  if (counter.hasOwnProperty(newLetter)){
-    counter[newLetter]++;
+  let letter = sample_text.substring(0,1).toLowerCase();
+  if (counter.hasOwnProperty(letter)){
+    counter[letter]++;
     return countLetters(counter, sample_text.substring(1, sample_text.length));
   }else{
     return countLetters(counter , sample_text.substring(1, sample_text.length));
