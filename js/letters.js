@@ -21,14 +21,13 @@ function countLetters(counter, sample_text){
   }
   let letter = sample_text.substring(0,1);
   let newLetter = letter.toLowerCase();
-  if (counter.hasOwnProperty(letter)){
-    counter[letter]++;
+  if (counter.hasOwnProperty(newLetter)){
+    counter[newLetter]++;
     return countLetters(counter, sample_text.substring(1, sample_text.length));
   }else{
     return countLetters(counter , sample_text.substring(1, sample_text.length));
   }
 }
-
 
 $(document).ready(function(){
   countLetters(counter, sample_text);
